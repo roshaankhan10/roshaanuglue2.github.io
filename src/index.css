@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Academic Research Dashboard Design System
+All colors MUST be HSL format for consistency
+*/
+
+@layer base {
+  :root {
+    /* Light sky blue academic theme */
+    --background: 248 100% 99%;
+    --foreground: 213 31% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 213 31% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 31% 25%;
+
+    --primary: 212 100% 47%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 212 100% 85%;
+    --primary-gradient: linear-gradient(135deg, hsl(212 100% 47%), hsl(197 100% 63%));
+
+    --secondary: 210 25% 95%;
+    --secondary-foreground: 213 31% 25%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 213 19% 46%;
+
+    --accent: 197 100% 90%;
+    --accent-foreground: 213 31% 25%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 212 50% 90%;
+    --input: 212 50% 90%;
+    --ring: 212 100% 47%;
+
+    --radius: 0.75rem;
+
+    /* Academic specific colors */
+    --research-blue: 212 100% 47%;
+    --sky-light: 197 100% 95%;
+    --academic-text: 213 31% 25%;
+    --section-bg: 210 40% 98%;
+    
+    /* Shadows and effects */
+    --shadow-academic: 0 4px 20px -2px hsl(212 100% 47% / 0.1);
+    --shadow-card: 0 2px 10px -2px hsl(212 50% 50% / 0.15);
+    --gradient-hero: linear-gradient(135deg, hsl(197 100% 95%), hsl(212 100% 97%));
+  }
+
+  .dark {
+    --background: 213 31% 18%;
+    --foreground: 210 40% 98%;
+
+    --card: 213 31% 20%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 213 31% 20%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 212 100% 60%;
+    --primary-foreground: 213 31% 18%;
+
+    --secondary: 213 31% 25%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 213 31% 25%;
+    --muted-foreground: 210 20% 65%;
+
+    --accent: 212 100% 25%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 213 31% 25%;
+    --input: 213 31% 25%;
+    --ring: 212 100% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', 'Calibri', sans-serif;
+    font-feature-settings: 'cv11', 'ss01';
+    font-variation-settings: 'opsz' 32;
+  }
+
+  /* Academic typography */
+  .text-academic {
+    @apply text-[hsl(var(--academic-text))];
+  }
+
+  .bg-research {
+    background: var(--primary-gradient);
+  }
+
+  .bg-section {
+    @apply bg-[hsl(var(--section-bg))];
+  }
+
+  /* Smooth transitions */
+  .transition-academic {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
