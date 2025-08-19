@@ -34,7 +34,7 @@ export default defineConfig({
     },
   },
   // This is important for GitHub Pages
-  base: '/roshaanglue2.github.io/',
+  base: '/roshaanuglue2.github.io/',
   build: {
     outDir: 'dist',
     sourcemap: false,
